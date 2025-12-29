@@ -1,0 +1,136 @@
+<!doctype html>
+
+<html lang = "en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+         <link rel="stylesheet" href="style.css">
+
+   
+    </head>
+<body> 
+   
+    <div class = "info">
+        <div class="pic">
+            <image src="kevin.png" alt="kevin jover">
+        </div>
+        <div class= "name">Kevin Jover</div>
+        <div class="desc"></div>
+        <div class="desc">Motion Designer</div>
+    </div> 
+        
+            <div class= "buttons">
+                <button onclick="scrollToContact()" id = "work"class="work">Let's work</button>
+                <button onclick="scrollToProjects()"id = "portfo"class="port">Portfolio</button>
+            </div>  
+       
+
+    
+        <div class="media-grid">
+            <a href="proj1.html">
+            <div class="media-card">
+                <img class="static" src="outbound.png" alt="">
+                <img class="gif" src="outbound.gif" alt="">
+                
+            </div>
+            </a>
+            <a href="proj2.html">
+            <div class="media-card">
+                <img class="static" src="Sicredi_Verao.jpg" alt="">
+                <img class="gif" src="Sicredi_Verao.gif" alt="">
+            </div>
+            </a>
+
+            <a href="proj3.html">
+            <div class="media-card">
+                <img class="static" src="SicrediConselheiros.png" alt="">
+                <img class="gif" src="SicrediConselheiros.gif" alt="">
+            </div>
+            </a>
+            
+            <a href = "proj4.html">
+            <div class="media-card">
+                <img class="static" src="Eixo-Platina.png" alt="">
+                <img class="gif" src="Eixo-Platina.gif" alt="">
+            </div>
+            </a>
+
+            <a href="proj5.html">
+            <div class="media-card">
+                <img class="static" src="factory.png" alt="">
+                <img class="gif" src="factory.gif" alt="">
+            </div>
+            </a>
+
+            <a href="proj6.html">
+             <div class="media-card">
+                <img class="static" src="Trick or treat_.png" alt="">
+                <img class="gif" src="Trick-or-treat.gif" alt="">
+            </div>
+            </a>
+        </div>
+
+<section class="contact" id="contact">
+  <h2>Work with me</h2>   
+
+  <form id="contact-form">
+    <div class="nameContact">Name</div>
+    <input 
+      type="text"
+      name="user_name"
+      class="inputName"
+      required
+    >
+
+    <div class="nameEmail">Email</div>
+    <input 
+      type="email"
+      name="user_email"
+      class="inputEmail"
+      required
+    >
+
+    <div class="message">Message</div>
+    <textarea 
+      name="message"
+      id="messageBox"
+      required
+    ></textarea>
+
+    <button type="submit" class="buttonSend">Send</button>
+  </form>
+</section>
+<script src="https://cdn.emailjs.com/sdk/4.0.3/email.min.js"></script>
+
+<script>
+emailjs.init({
+  publicKey: "qjFGEEePI3vfPP-rX"
+});
+
+const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    "service_0403n7c",
+    "template_d0zghpu",
+    form
+  )
+  .then(() => {
+    alert("Message sent successfully!");
+    form.reset();
+  })
+  .catch((error) => {
+    console.error("EmailJS error:", error);
+    alert("Failed to send message");
+  });
+});
+</script>
+
+</body>
+</html>
+
