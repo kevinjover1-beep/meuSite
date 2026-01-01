@@ -83,8 +83,12 @@ body {
 }
 
 .insta {
+  display: flex;
+  position: relative;
+  top: -0.6px;
   width: 18px;
   height: 18px;
+  
   margin-left: 12px;
 }
 
@@ -120,8 +124,18 @@ body {
 
 .buttonSend {
   height: 30px;
+  margin: 2vh auto;
+  transition-property: all;
+  transition: 250ms ease;
 }
-
+.work{
+  transition-property: all;
+  transition: 250ms ease;
+}
+button{
+  transition-property: all;
+  transition: 250ms ease;
+}
 button:hover {
   background-color: #5777f7;
   border-color: rgb(97, 152, 201);
@@ -140,7 +154,9 @@ button:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.5rem;
-  padding: 34px 60px;
+  width:96vw;
+  margin:0 auto;
+  padding: 34px 65px;
 }
 
 @media (max-width: 1024px) {
@@ -259,5 +275,5 @@ textarea:focus-visible {
 
 /* Submit */
 .buttonSend {
-  margin: 2vh auto;
+  
 }
