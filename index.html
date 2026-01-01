@@ -1,140 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Kevin Jover — Motion Designer & UX Motion for Web</title>
-  <meta name="description" content="Portfolio of Kevin Jover, Motion Designer specialized in UX Motion, web animations, and interactive experiences.">
-  <meta http-equiv="Content-Language" content="en">
-
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Kevin Jover — Motion Designer & Web Animation Specialist</title>
+  <meta name="description" content="Portfolio of Kevin Jover, motion designer specialized in UX motion, web animations, and interactive interfaces.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Structured data (SEO, zero visual impact) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Kevin Jover",
-    "jobTitle": "Motion Designer",
-    "url": "https://kevinjovermotion.github.io/meuSite/",
-    "sameAs": [
-      "https://www.linkedin.com/in/kevin-jover/",
-      "https://www.instagram.com/kev1njover/"
-    ]
-  }
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=General+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- HEADER / INFO -->
-  <div class="info">
-
+  <!-- PROFILE CARD -->
+  <div class="info" role="banner">
     <div class="pic">
-      <img src="kevin.png" alt="Kevin Jover, Motion Designer">
+      <img src="img/profile.jpg" alt="Kevin Jover portrait">
     </div>
 
-    <!-- H1 for SEO, class unchanged -->
-    <h1 class="name">Kevin Jover</h1>
-
-    <!-- SAME CLASS, SAME POSITIONING -->
-    <div class="desc">Motion Designer</div>
+    <div>
+      <div class="name">
+        <h1 style="all: unset;">Kevin Jover</h1>
+      </div>
+      <div class="desc">
+        Motion Designer · UX Motion · Web Animation
+      </div>
+    </div>
 
     <div class="icons">
-      <a href="https://www.linkedin.com/in/kevin-jover/" target="_blank">
-        <img class="lkd" src="linkedin.png" alt="LinkedIn">
+      <a href="https://linkedin.com" aria-label="LinkedIn profile">
+        <img class="lkd" src="img/linkedin.svg" alt="">
       </a>
-      <a href="https://www.instagram.com/kev1njover/" target="_blank">
-        <img class="insta" src="instagram.png" alt="Instagram">
+      <a href="https://instagram.com" aria-label="Instagram profile">
+        <img class="insta" src="img/instagram.svg" alt="">
       </a>
     </div>
-
   </div>
 
-  <!-- BUTTONS -->
+  <!-- ACTION BUTTONS -->
   <div class="buttons">
-    <button onclick="scrollToContact()" id="work" class="work">Let's work</button>
-    <button onclick="scrollToProjects()" id="portfo" class="port">Portfolio</button>
+    <div class="work">Work</div>
+    <div class="port">Portfolio</div>
   </div>
 
   <!-- PORTFOLIO GRID -->
-  <div class="media-grid" id="portfolio">
+  <div class="media-grid" aria-label="Motion design portfolio">
+    
+    <div class="media-card">
+      <img class="static" src="img/thumb1.jpg" alt="UX motion animation preview">
+      <img class="gif" src="img/thumb1.gif" alt="">
+    </div>
 
-    <!-- SEO text OUTSIDE layout flow -->
-    <p style="position:absolute;left:-9999px;">
-      Motion design, UX motion and web animation portfolio projects by Kevin Jover.
-    </p>
+    <div class="media-card">
+      <img class="static" src="img/thumb2.jpg" alt="Web animation interaction">
+      <img class="gif" src="img/thumb2.gif" alt="">
+    </div>
 
-    <a href="proj1.html">
-      <div class="media-card">
-        <img class="static" src="outbound.png" alt="Outbound UX motion design project">
-        <img class="gif" src="outbound.gif" alt="">
-      </div>
-    </a>
-
-    <a href="proj2.html">
-      <div class="media-card">
-        <img class="static" src="Sicredi_Verao.jpg" alt="Sicredi summer motion design campaign">
-        <img class="gif" src="Sicredi_Verao.gif" alt="">
-      </div>
-    </a>
-
-    <a href="proj3.html">
-      <div class="media-card">
-        <img class="static" src="SicrediConselheiros.png" alt="Sicredi Conselheiros motion design">
-        <img class="gif" src="SicrediConselheiros.gif" alt="">
-      </div>
-    </a>
-
-    <a href="proj4.html">
-      <div class="media-card">
-        <img class="static" src="Eixo-Platina.png" alt="Eixo Platina web animation">
-        <img class="gif" src="Eixo-Platina.gif" alt="">
-      </div>
-    </a>
-
-    <a href="proj5.html">
-      <div class="media-card">
-        <img class="static" src="factory.png" alt="Factory motion design project">
-        <img class="gif" src="factory.gif" alt="">
-      </div>
-    </a>
-
-    <a href="proj6.html">
-      <div class="media-card">
-        <img class="static" src="Trick or treat_.png" alt="Trick or Treat motion animation">
-        <img class="gif" src="Trick-or-treat.gif" alt="">
-      </div>
-    </a>
+    <div class="media-card">
+      <img class="static" src="img/thumb3.jpg" alt="Motion design for interface">
+      <img class="gif" src="img/thumb3.gif" alt="">
+    </div>
 
   </div>
 
   <!-- CONTACT -->
-  <div class="contact" id="contact">
-    <h2>Work with me</h2>
+  <div class="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
 
-    <form id="contact-form" action="https://formspree.io/f/xojqryyg" method="POST">
-      <div class="nameContact">Name</div>
-      <input type="text" name="name" required>
+    <form>
+      <label class="nameContact" for="name">Name</label>
+      <input id="name" type="text" name="name">
 
-      <div class="nameEmail">Email</div>
-      <input type="email" name="email" required>
+      <label class="nameEmail" for="email">Email</label>
+      <input id="email" type="email" name="email">
 
-      <div class="message">Message</div>
-      <textarea name="message" id="messageBox" required></textarea>
+      <div id="msg">
+        <label class="message" for="messageBox">Message</label>
+      </div>
 
-      <button type="submit" class="buttonSend">Send</button>
-      <p id="form-status" style="display:none;"></p>
+      <textarea id="messageBox" name="message"></textarea>
+
+      <button class="buttonSend" type="submit">Send</button>
     </form>
   </div>
 
-  <script src="scripts.js"></script>
 </body>
 </html>
