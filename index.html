@@ -1,141 +1,140 @@
 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html lang = "en">
-    <head>
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">    
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-        
-   
-    </head>
-<body> 
-   
-    <div class = "info">
-        <div class="pic">
-            <image src="kevin.png" alt="kevin jover">
-        </div>
-        <div class= "name">Kevin Jover</div>
-        <div class="desc"></div>
-        <div class="desc">Motion Designer</div>
-        <div class = "icons">
-          <a href = "https://www.linkedin.com/in/kevin-jover/" target="_blank"><img class= "lkd" src="linkedin.png" ></a>
-          <a href="https://www.instagram.com/kev1njover/" target="_blank"><img class = "insta" src="instagram.png"></a>
-        </div>
-    </div> 
-        
-            <div class= "buttons">
-                <button onclick="scrollToContact()" id = "work"class="work">Let's work</button>
-                <button onclick="scrollToProjects()"id = "portfo"class="port">Portfolio</button>
-            </div>  
-       
+  <title>Kevin Jover — Motion Designer & UX Motion for Web</title>
+  <meta name="description" content="Portfolio of Kevin Jover, Motion Designer specialized in UX Motion, web animations, and interactive experiences.">
+  <meta http-equiv="Content-Language" content="en">
 
-    
-        <div class="media-grid" id="portfo">
-            <a href="proj1.html">
-            <div class="media-card">
-                <img class="static" src="outbound.png" alt="">
-                <img class="gif" src="outbound.gif" alt="">
-                
-            </div>
-            </a>
-            <a href="proj2.html">
-            <div class="media-card">
-                <img class="static" src="Sicredi_Verao.jpg" alt="">
-                <img class="gif" src="Sicredi_Verao.gif" alt="">
-            </div>
-            </a>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-            <a href="proj3.html">
-            <div class="media-card">
-                <img class="static" src="SicrediConselheiros.png" alt="">
-                <img class="gif" src="SicrediConselheiros.gif" alt="">
-            </div>
-            </a>
-            
-            <a href = "proj4.html">
-            <div class="media-card">
-                <img class="static" src="Eixo-Platina.png" alt="">
-                <img class="gif" src="Eixo-Platina.gif" alt="">
-            </div>
-            </a>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-            <a href="proj5.html">
-            <div class="media-card">
-                <img class="static" src="factory.png" alt="">
-                <img class="gif" src="factory.gif" alt="">
-            </div>
-            </a>
+  <link rel="stylesheet" href="style.css">
 
-            <a href="proj6.html">
-             <div class="media-card">
-                <img class="static" src="Trick or treat_.png" alt="">
-                <img class="gif" src="Trick-or-treat.gif" alt="">
-            </div>
-            </a>
-        </div>
+  <!-- Structured data (SEO, zero visual impact) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kevin Jover",
+    "jobTitle": "Motion Designer",
+    "url": "https://kevinjovermotion.github.io/meuSite/",
+    "sameAs": [
+      "https://www.linkedin.com/in/kevin-jover/",
+      "https://www.instagram.com/kev1njover/"
+    ]
+  }
+  </script>
+</head>
 
-<section class="contact" id="contact">
-  <h2>Work with me</h2>   
+<body>
 
-<form id="contact-form" action="https://formspree.io/f/xojqryyg" method="POST">
-  <div class="nameContact">Name</div>
-  <input type="text" name="name" class="inputName" required>
+  <!-- HEADER / INFO -->
+  <div class="info">
 
-  <div class="nameEmail">Email</div>
-  <input type="email" name="email" class="inputEmail" required>
+    <div class="pic">
+      <img src="kevin.png" alt="Kevin Jover, Motion Designer">
+    </div>
 
-  <div class="message">Message</div>
-  <textarea name="message" id="messageBox" required></textarea>
+    <!-- H1 for SEO, class unchanged -->
+    <h1 class="name">Kevin Jover</h1>
 
-  <button type="submit" class="buttonSend">Send</button>
+    <!-- SAME CLASS, SAME POSITIONING -->
+    <div class="desc">Motion Designer</div>
 
-  <!-- feedback -->
-  <p id="form-status" style="display:none;"></p>
-</form>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/kevin-jover/" target="_blank">
+        <img class="lkd" src="linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/kev1njover/" target="_blank">
+        <img class="insta" src="instagram.png" alt="Instagram">
+      </a>
+    </div>
 
-<script src="scripts.js"></script>
-<script>
-  const form = document.getElementById("contact-form");
-  const status = document.getElementById("form-status");
+  </div>
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // 🚫 impede ir para outra página
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <button onclick="scrollToContact()" id="work" class="work">Let's work</button>
+    <button onclick="scrollToProjects()" id="portfo" class="port">Portfolio</button>
+  </div>
 
-    const formData = new FormData(form);
+  <!-- PORTFOLIO GRID -->
+  <div class="media-grid" id="portfolio">
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+    <!-- SEO text OUTSIDE layout flow -->
+    <p style="position:absolute;left:-9999px;">
+      Motion design, UX motion and web animation portfolio projects by Kevin Jover.
+    </p>
 
-      if (response.ok) {
-        status.textContent = "Message sent successfully!";
-        status.style.display = "block";
-        status.style.color = "green";
-        form.reset(); // ✅ limpa o formulário
-      } else {
-        status.textContent = "Oops! Something went wrong.";
-        status.style.display = "block";
-        status.style.color = "red";
-      }
-    } catch (error) {
-      status.textContent = "Network error. Try again later.";
-      status.style.display = "block";
-      status.style.color = "red";
-    }
-  });
-</script>
+    <a href="proj1.html">
+      <div class="media-card">
+        <img class="static" src="outbound.png" alt="Outbound UX motion design project">
+        <img class="gif" src="outbound.gif" alt="">
+      </div>
+    </a>
 
+    <a href="proj2.html">
+      <div class="media-card">
+        <img class="static" src="Sicredi_Verao.jpg" alt="Sicredi summer motion design campaign">
+        <img class="gif" src="Sicredi_Verao.gif" alt="">
+      </div>
+    </a>
 
+    <a href="proj3.html">
+      <div class="media-card">
+        <img class="static" src="SicrediConselheiros.png" alt="Sicredi Conselheiros motion design">
+        <img class="gif" src="SicrediConselheiros.gif" alt="">
+      </div>
+    </a>
 
+    <a href="proj4.html">
+      <div class="media-card">
+        <img class="static" src="Eixo-Platina.png" alt="Eixo Platina web animation">
+        <img class="gif" src="Eixo-Platina.gif" alt="">
+      </div>
+    </a>
+
+    <a href="proj5.html">
+      <div class="media-card">
+        <img class="static" src="factory.png" alt="Factory motion design project">
+        <img class="gif" src="factory.gif" alt="">
+      </div>
+    </a>
+
+    <a href="proj6.html">
+      <div class="media-card">
+        <img class="static" src="Trick or treat_.png" alt="Trick or Treat motion animation">
+        <img class="gif" src="Trick-or-treat.gif" alt="">
+      </div>
+    </a>
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact" id="contact">
+    <h2>Work with me</h2>
+
+    <form id="contact-form" action="https://formspree.io/f/xojqryyg" method="POST">
+      <div class="nameContact">Name</div>
+      <input type="text" name="name" required>
+
+      <div class="nameEmail">Email</div>
+      <input type="email" name="email" required>
+
+      <div class="message">Message</div>
+      <textarea name="message" id="messageBox" required></textarea>
+
+      <button type="submit" class="buttonSend">Send</button>
+      <p id="form-status" style="display:none;"></p>
+    </form>
+  </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
-
