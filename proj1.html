@@ -8,40 +8,161 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
          <link rel="stylesheet" href="style.css">
+      <script src="scripts.js"></script>
+      <script>
+        
 
+      </script>
         <style>
-            .proj1{
-               width: 80%;              /* change this */
-  max-width: 1200px;       /* optional */
-  margin: 40px auto;          /* center */
-  aspect-ratio: 16 / 9;
-  position: relative;
-}
 
-.proj1 iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+            *{
+              font-family: "Lato" , sans-serif;
+              color: #111;
+            }
+            .main{
+              
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              
+            }
+            a{
+              text-decoration: none;
+              color: black;
+            }
+            .proj1{
+              display:flex;
+              justify-content: center;
+              align-items:center;
+               width: 90vw;             
+               max-width: 1200px;       
                
-                
-         
-        </style>   
+               aspect-ratio: 16 / 9;
+               position: relative;
+            }
+
+            .proj1 iframe {
+
+              width: 80%;
+              height: 80%;
+              border: 0;
+              padding: 0;
+              
+            }
+            p{
+              width: 90vw;
+              font-size: 22px;
+              text-align: start;
+              padding: 40px;
+              margin: 0;
+            }
+            .dvShots{
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              align-content: center;
+              width: 90vw;
+            }
+            .shots{
+              display: flex;
+              flex-flow: row;
+              align-items: center;
+            }
+           .dvShots img{
+              flex-basis: 200px;
+              height: 100px;
+            }
+            .credits{
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              
+            }
+            .credits p{
+              text-align: center;
+              padding: 4px;
+              font-size: 16px;
+              
+            }
+            .tks{
+              color: grey;
+              margin-top: 60px;
+              margin-bottom: 60px;
+            }
+            .arrow{
+              margin: 0;
+              padding: 0;
+              font-size: 50px;
+            }
+            .arrow a, #up{
+              color:grey;
+              width: 100vw;
+              transition: 200ms ease;
+            }
+            .arrow a:hover, #up:hover{
+              color: rgb(0, 0, 0);
+            }
+            .about{
+              margin: 0;
+            }
+            #arrowUp{
+              margin-bottom: 40px;
+              cursor: pointer;
+            }
+            
+          </style>   
 </head>
 
 <body>
-  
+    <main class="main">
+        <p class="arrow"><a href="index.html">&larr;</a></p>
+        <h1 id="start">Outbound Launch - <a href="https://www.outbound.com/">Outbound.com</a></h1>
+        <div class="proj1">
+          
+          <iframe
+            src="https://player.vimeo.com/video/1150121590?badge=0&autopause=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="outbound.com (1080p)">
+          </iframe>
+        </div>
 
+        <h2 class="about">Sobre o projeto | About the project</h2>
 
+        <p>Fui convidado pela <strong><a href="https://www.outbound.com/">outbound.com</a></strong> para traduzir visualmente as principais funcionalidades da plataforma por meio deste vídeo.
 
-    <div class="proj1">
-  <iframe
-    src="https://player.vimeo.com/video/1150121590?badge=0&autopause=0"
-    allow="autoplay; fullscreen; picture-in-picture"
-    allowfullscreen
-    title="outbound.com (1080p)">
-  </iframe>
-</div>
+        A empresa utiliza inteligência artificial para escanear sites automaticamente, criar e publicar campanhas de anúncios gratuitas, entregando anúncios segmentados diretamente ao público ideal de cada negócio.
 
+        O desafio foi transformar um produto técnico em uma narrativa visual clara, dinâmica e fácil de entender, destacando o valor da automação e da tecnologia aplicada ao marketing digital.</p>
+
+        <span>_________</span>
+
+        <p>I was invited by <strong><a href="https://www.outbound.com/">outbound.com</a></strong> to visually explain the platform’s core features through this video.
+
+The company uses artificial intelligence to scan websites, automatically create, and publish free advertising campaigns that deliver targeted ads directly to each business’s ideal customer.
+
+The main challenge was translating a technical product into a clear, engaging, and easy-to-understand visual narrative, highlighting the power of automation and AI-driven marketing.</p>
+      <div class="dvShots">
+       
+         <img src="LogoReveal.gif" alt="logo animation">
+        </div>
+      </div>
+
+      <div class="credits">
+        <h3><strong>Créditos | Project Team</strong></h3>
+        <span><p><strong>Animation:</strong> Kevin Jover</p></span>
+        <span><p><strong>Design:</strong> Outbound.com</p></span>
+        <p class="tks">Thanks for watching!</p>
+      </div>
+
+      <p class="arrow" onclick="scrollToStart()" id="arrowUp"><a>&uarr;</a></p>      
+</main>
+
+      
 </body>
+
 
