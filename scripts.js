@@ -24,3 +24,14 @@ const form = document.getElementById("contact-form");
 
     form.reset()});
 
+
+const logo = new rive.Rive({
+    src: 'logo.riv',
+    canvas: document.querySelector('canvas'),
+    autoplay: true,
+    animations: "circle",
+      onLoad:()=>{
+            logo.resizeDrawingSurfaceToCanvas();
+    }
+
+})
