@@ -8,42 +8,170 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
          <link rel="stylesheet" href="style.css">
-
+      <script src="script.js"></script>
+      <script>
+        
+function scrollToStart(){
+  document.querySelector("#start").scrollIntoView({behavior:"smooth"});
+}
+      </script>
         <style>
-            .proj1{
-               width: 80%;              /* change this */
-  max-width: 1200px;       /* optional */
-  margin: 40px auto;          /* center */
-  aspect-ratio: 16 / 9;
-  position: relative;
-}
 
-.proj1 iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+            *{
+              font-family: "Lato" , sans-serif;
+              color: #111;
+            }
+            .main{
+              
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              
+            }
+            a{
+              text-decoration: none;
+              color: black;
+            }
+            .proj1{
+              display:flex;
+              justify-content: center;
+              align-items:center;
+               width: 90vw;             
+               max-width: 1200px;       
                
-                
-         
-        </style>   
+               aspect-ratio: 16 / 9;
+               position: relative;
+            }
+
+            .proj1 iframe {
+
+              width: 80%;
+              height: 80%;
+              border: 0;
+              padding: 0;
+              
+            }
+            p{
+              width: 90vw;
+              font-size: 22px;
+              text-align: start;
+              padding: 40px;
+              margin: 0;
+            }
+            .dvShots{
+              display: flex;
+              flex-flow: column;
+              align-items: center;
+              align-content: center;
+              width: 90vw;
+            }
+            .shots{
+              display: flex;
+              flex-flow: row;
+              align-items: center;
+            }
+           .dvShots img{
+              flex-basis: 200px;
+              height: 100px;
+            }
+            .credits{
+              display: flex;
+              flex-flow: column;
+              justify-content: center;
+              align-items: center;
+              
+            }
+            .credits p{
+              text-align: center;
+              padding: 4px;
+              font-size: 16px;
+              
+            }
+            .tks{
+              color: grey;
+              margin-top: 60px;
+              margin-bottom: 60px;
+            }
+            .arrow{
+              margin: 0;
+              padding: 0;
+              font-size: 50px;
+            }
+            .arrow a, #up{
+              color:grey;
+              width: 100vw;
+              transition: 200ms ease;
+            }
+            .arrow a:hover, #up:hover{
+              color: rgb(0, 0, 0);
+            }
+            .about{
+              margin: 0;
+            }
+            #arrowUp{
+              margin-bottom: 40px;
+              cursor: pointer;
+            }
+             @media (max-width: 600px) {
+              h1{
+                font-size: 22px;
+              }
+              h2{
+                font-size: 16px;
+              }
+              p{
+                font-size: 12px;
+              }
+              .credits{
+                width: 200px;
+              }
+        
+            }
+          </style>   
 </head>
 
 <body>
-  
-
-
-
-    <div class="proj1">
-  <iframe
+    <main class="main">
+        <p class="arrow"><a href="index.html">&larr;</a></p>
+        <h1 id="start">Trick or Treat</h1>
+        <div class="proj1">
+          
+         <iframe
     src="https://player.vimeo.com/video/1150121188?badge=0&autopause=0"
     allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen
-    title="Sicredi Conselheiros">
+    title="Trick or Treat">
   </iframe>
-</div>
+        </div>
 
+        <h2 class="about">Sobre o projeto | About the project</h2>
+
+        <p>Projeto pessoal onde consegui entender melhor as principais etapas do 3D, passando por modelagem, iluminação, materiais e animação. Com tema de Halloween, foi um trabalho muito satisfatório, mesmo sendo um dos meus primeiros projetos em 3D.</p>
+
+        <span>_________</span>
+
+        <p>Personal project where I was able to better understand the main stages of the 3D pipeline, including modeling, lighting, materials, and animation. With a Halloween theme, it was a very satisfying project, even though it was one of my first 3D works.</p>
+    
+      </div>
+
+      <div class="credits">
+        <h3><strong>Créditos | Project Team</strong></h3>
+        <span><p><strong>Animation:</strong> Kevin Jover</p></span>
+        <span><p><strong>Lookdev:</strong> Kevin Jover</p></span>
+      
+        <p class="tks">Thanks for watching!</p>
+      </div>
+
+      <p class="arrow" onclick="scrollToStart()" id="arrowUp"><a>&uarr;</a></p>      
+</main>
+
+      
 </body>
+
+
 
 
 
